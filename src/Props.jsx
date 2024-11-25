@@ -1,16 +1,18 @@
-const ListItem = props => <li>{props.animal}</li>
+const ListItem = (props) => <li>{props.animal}</li>;
 
+const animals = ["Lion", "Cow", "Snake", "Lizard"];
 export function List(props) {
-  if (!props.animals)
-    return <div>Loading...</div>
+  if (!props.animals) return <div>Loading...</div>;
 
   if (props.animals.length === 0)
-    return <div>There are no animals in the list!</div>
+    return <div>There are no animals in the list!</div>;
 
-  return <ul>{
-    props.animals.map((animal) =>
-      animal.startsWith("L") && <ListItem key={animal} animal={animal} />)
-  }</ul>
+  return (
+    <ul>
+      {props.animals.map(
+        (animal) =>
+          animal.startsWith("L") && <ListItem key={animal} animal={animal} />,
+      )}
+    </ul>
+  );
 }
-
-

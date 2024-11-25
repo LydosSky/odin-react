@@ -5,9 +5,10 @@ import Greeting from "./Greeting";
 import { Footer, Header, Main } from "./components";
 import App from "./App";
 import Colors from "./Colors";
+import Person from "./Person";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Colors />
+    <Person />
   </StrictMode>,
 );
