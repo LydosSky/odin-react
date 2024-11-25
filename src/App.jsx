@@ -1,5 +1,9 @@
 import "./App.css";
-import { List } from "./Props"
+
+
+const COLOR = []
+
+var Square = () => { }
 
 function Button({ text, color, fontSize }) {
   const buttonStyle = {
