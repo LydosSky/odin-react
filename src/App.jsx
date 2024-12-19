@@ -1,20 +1,22 @@
 import { Link } from "react-router-dom";
 import "./App.css";
+import { createContext } from "react";
+import Header from "./Header";
+import ProductDetail from "./ProductDetail";
 
-function App() {
+export const ShopContext = createContext({
+  products: [],
+  cartItems: [],
+  addToCart: () => {},
+});
+
+export default function App() {
   return (
     <div>
-      <h1>Hello from the main page of the app!</h1>
-      <p>Here are some examples of links to other pages</p>
-      <nav>
-        <ul>
-          <li>
-            <Link to="profile">Profile page</Link>
-          </li>
-        </ul>
-      </nav>
+      <ShopContext.Provider value={{ cartItems, products, addToCart }}>
+        <Header />
+        <ProductDetail />
+      </ShopContext.Provider>
     </div>
   );
 }
-
-export default App;
