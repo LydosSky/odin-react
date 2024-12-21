@@ -1,10 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { ShopContext } from "./App";
 
 function Links({ cartItemsCount }) {
-  const { cartItems } = useContext(ShopContext);
-
   return (
     <ul>
       <li>
